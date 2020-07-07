@@ -1,0 +1,36 @@
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+
+}
+
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  
+} 
+th
+{
+background-color:#F7F7F7;	
+font-size:22px;
+padding:10px;
+}
+
+td 
+{
+text-align:center;	
+	
+}
+table.tab2
+{
+	width:50%; 
+	
+}
+
+h1, footer {
+    text-align: center;
+}

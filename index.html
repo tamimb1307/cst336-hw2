@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang = "en">
+  
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+
+
+$(document).ready(function() {
+$("#order").hide();
+  $("#b3").click(function(){
+  
+  $("#ct").fadeOut()
+     $("table.tab2").fadeOut()
+        var selected= $("select.shipping").val();
+     $("#order").html("Your Order is confirmed using "+ selected +" shipping method")
+    $("#order").fadeIn("slow");
+  });
+});
+</script>
+
+</head>
+<body>
+
+<h1>Welcome to the Shopping Cart page</h1>
+
+<p id="test"  >Change number of selected items or shipping method to get total price.</p>
+
+
+<table style="width:100%">
+  <tr>
+    <th>Image</th>
+    <th>Product</th>
+    <th>Price</th> 
+    <th>Quantity</th>
+	<th>Total</th>
+  </tr>
+  <tr>
+  <td><img src="laptop.jpg" width="100" height="100">
+</td>
+    <td>Laptop</td>
+    <td>$500</td>
+    <td>  <input type="number" id="first"   min=0 value=1><br><br>
+  <button onclick="myFunction1()" type="button">Update</button>
+</td>
+  <td><h3 id="out1">$500</h3></td>
+  </tr>
+
+
+  <tr>
+  <td><img src="mobile.jpg" width="70" height="100">
+</td>
+    <td>Mobile</td>
+    <td>$140</td>
+    <td>  <input type="number" id="second"  min=0 value=1><br><br>
+  <button id="b1" onclick="myFunction2()" type="button">Update</button>
+</td>
+  <td><h3 id="out2">$140</h3></td>
+  </tr>
+
+</table>
+
+</br>
+</br>
+<h2 id="ct">Cart Totals</h2>
+
+</br>
+
+<table class="tab2" >
+  <tr>
+    <th>Subtotal</th>
+	<td><h3 id="sub">$640</h3></td>
+  </tr>
+  
+    <tr>
+    <th>Tax</th>
+	<td><h3 id="tax">$128</h3></td>
+  </tr>
+  
+   <tr>
+    <th>Total</th>
+	<td><h3 id="total">$786</h3></td>
+  </tr>
+  
+  <tr>
+    <th>shipping</th>
+	<td>
+
+<select class="shipping" id="shipping">
+  <option value="FedEX">Fedex</option>
+  <option value="USPS">USPS</option>
+  <option value="Standard">Standard</option>
+
+</select></td>
+  </tr>
+  
+   <tr>
+    <th></th>
+	<td><button id="b3" type="button">Proceed Checkout</button></td>
+  </tr>
+</table>
+
+</br>
+<h1 id="order"></h1>
+
+
+
+<script src="myScript.js"></script>
+
+        <!-- This is the footer -->
+        <!-- The footer goes inside the body but not always -->
+        <footer>
+            <hr>
+            CST 336 Internet Programming 2020&copy; Barez <br /> <!-- &copy for copyright -->
+            <strong> Disclaimer:</strong> the information on this page is for academic purposes. <br />
+            It is used for academic purposes only, unauthorized usage is prohibited.
+            
+            <figure> <!-- includes an image -->
+                    <img src="img/csumblogo.png" alt = "logo" />
+            </figure>
+            
+        </footer>
+        <!-- closing footer -->
+
+</body>
+</html>
